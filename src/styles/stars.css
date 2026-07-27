@@ -1,0 +1,9 @@
+#stars{
+    width: 25%;
+    height: 646px;
+    background-color: black;
+    border: 2px solid #1f1f1f;
+    background-image: url(../../assets/images/rain_bg.gif);
+    background-repeat: no-repeat;
+    background-size: 210%;
+}

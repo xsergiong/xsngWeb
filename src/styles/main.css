@@ -1,0 +1,82 @@
+@font-face {
+  font-family: Retro; /* set name */
+  src: url(../../assets/fonts/ka1.ttf); /* url of the font */
+}
+@font-face {
+  font-family: Pixels; /* set name */
+  src: url(../../assets/fonts/CoralPixels-Regular.ttf); /* url of the font */
+}
+@font-face {
+  font-family: LowBits; /* set name */
+  src: url(../../assets/fonts/Orange-Kid.otf); /* url of the font */
+}
+@font-face {
+  font-family: Glitch; /* set name */
+  src: url(../../assets/fonts/GlitchGoblin.ttf); /* url of the font */
+}
+
+body{
+    background-color: #000707;
+    background-size: 50%;
+}
+
+header{
+    display: flex;
+    justify-content: center;
+}
+
+main{
+    display: flex;
+    justify-content: center;
+}
+
+h1{
+    font-family: Retro;
+    color: #229999;
+    font-size: 64px;
+}
+
+h2{
+    font-family: LowBits;
+    color: #229999;
+    font-size: 48px;
+    margin-left: 5vh;
+    width: 90%;
+}
+h3{
+    font-family: LowBits;
+    color: #229999;
+    font-size: 32px;
+    margin-left: 5vh;
+    width: 90%;
+}
+
+p{
+    font-family: LowBits;
+    color: white;
+    font-size: 18px;
+    margin-left: 5vh;
+    width: 90%;
+}
+
+li{
+    font-family: LowBits;
+    color: white;
+    font-size: 18px;
+    margin-left: 5vh;
+    width: 90%;
+}
+
+a{
+    color: #12e2e2;
+}
+
+.dram-bold{
+    font-size: 22px;
+}
+.red-bold{
+    color: #8d0000;
+}
+.fade-text{
+    color: #444444;
+}
