@@ -4,7 +4,8 @@ function Load()
 {
     fetch('../../assets/json/blog-entries.json')
         .then(response => response.json())
-        .then(data => {
+        .then(data => 
+        {
             for (let i = 0; i < data.length; i++)
             {
                 let entry = document.createElement('div');
