@@ -32,26 +32,33 @@
     <script type="module">
         import LoadBlog from "../../src/components/Blog.js";
         import LoadStars from "../../src/components/Stars.js";
+        import BlockMobileAndTablet from "../../src/components/Blocker.js";
 
-        LoadBlog(
-            document.querySelector('main'),
-            '../json/blog-entries.json'
-        );
-        LoadStars(
-            document.querySelector('#blog-section'),
-            [
-                7,
-                5
-            ],
-            [
-                'Home',
-                'Blog'
-            ],
-            [
-                '../../index.html',
-                '#'
-            ]
-        );
+        function Load(){
+            if (BlockMobileAndTablet())
+                return;
+            LoadBlog(
+                document.querySelector('main'),
+                '../json/blog-entries.json'
+            );
+            LoadStars(
+                document.querySelector('#blog-section'),
+                [
+                    7,
+                    5
+                ],
+                [
+                    'Home',
+                    'Blog'
+                ],
+                [
+                    '../../index.html',
+                    '#'
+                ]
+            );
+        }
+
+        Load();
     </script>
 </body>
 </html>

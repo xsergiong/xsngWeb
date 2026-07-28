@@ -75,6 +75,15 @@ a:hover{
     font-weight: 700;
 }
 
+#void-body{
+    background-color: #fff; 
+}
+#void-text{
+    color: #000;
+    font-size: large;
+    font-family: 'Courier New', Courier, monospace;
+}
+
 .dram-bold{
     font-size: 22px;
 }
