@@ -15,5 +15,6 @@
     margin-bottom: 5vh;
 }
 .blog-entry .fade-text{
+    width: 93%;
     text-align: right;
 }

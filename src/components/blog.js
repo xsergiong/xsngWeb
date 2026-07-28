@@ -1,6 +1,17 @@
-function Load(path)
+function Load(root, path)
 {
-    const root = document.querySelector("#blog");
+    const section = document.createElement('section');
+    const blog = document.createElement('div');
+    const header = document.createElement('h2');
+
+    section.setAttribute('id', 'blog-section');
+    blog.setAttribute('id', 'blog');
+
+    header.textContent = 'BLOG';
+
+    blog.appendChild(header);
+    section.appendChild(blog);
+    root.appendChild(section);
 
     fetch(path)
         .then(response => response.json())
@@ -42,10 +53,10 @@ function Load(path)
                 }
                 entry.appendChild(time);
 
-                root.appendChild(entry);
+                blog.appendChild(entry);
             }
         }
     );
 }
 
-export default function LoadBlog(path) { Load(path) };
+export default function LoadBlog(root, path) { Load(root, path) };

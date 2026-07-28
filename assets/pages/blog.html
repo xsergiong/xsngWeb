@@ -12,25 +12,46 @@
     <header>
         <h1 id="title">xsergiong</h1>
     </header>
-    <main>
-        <section style="width: 78%; height: fit-content;" id="blog-section"">
-            <div style="width: 74.5%; margin-right: 0.5%;" id="blog">
-                <h2>BLOG</h2>
-            </div>
-            <div id="stars">
-                <h2>STARS</h2>
-                <ul>
-                    <li><a href="../../index.html">Home</a></li>
-                    <li><a href="#">Blog</a></li>
-                </ul>
-            </div>
-        </section> 
-    </main>
+    
+    <main></main>
+
+    <style>
+        #blog-section{
+            width: 78%;
+            height: fit-content;
+        }
+        #blog{
+            width: 74.5%;
+            margin-right: 0.5%;
+        }
+        .blog-entry{
+            width: 91%;
+        }
+    </style>
 
     <script type="module">
-        import LoadBlog from "../../src/components/blog.js";
+        import LoadBlog from "../../src/components/Blog.js";
+        import LoadStars from "../../src/components/Stars.js";
 
-        LoadBlog('../json/blog-entries.json');
+        LoadBlog(
+            document.querySelector('main'),
+            '../json/blog-entries.json'
+        );
+        LoadStars(
+            document.querySelector('#blog-section'),
+            [
+                7,
+                5
+            ],
+            [
+                'Home',
+                'Blog'
+            ],
+            [
+                '../../index.html',
+                '#'
+            ]
+        );
     </script>
 </body>
 </html>

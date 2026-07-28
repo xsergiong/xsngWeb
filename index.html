@@ -11,8 +11,9 @@
 </head>
 <body>
     <header>
-        <h1 id="title">xsergiong</h1>
+        <h1 id="title" class="unselectable">xsergiong</h1>
     </header>
+
     <main>
         <section id="sections">
             <section id="introduction-section">
@@ -51,18 +52,6 @@
                         </ul>
                     </div>
                 </div>
-                <div id="stars">
-                    <h2>STARS</h2>
-                    <ul>
-                        <li><a href="#">Home</a></li>
-                        <li><a href="./assets/pages/blog.html">Blog</a></li>
-                    </ul>
-                </div>
-            </section>
-            <section id="blog-section">
-                <div style="width: 100%" id="blog">
-                    <h2>BLOG</h2>
-                </div>
             </section>
         </section>
     </main>
@@ -70,14 +59,40 @@
     <style>
         .blog-entry
         {
-            width: 92.5%;
+            width: 93%;
+        }
+        .blog-entry .fade-text{
+            width: 95%;
+            text-align: right;
+        }
+        #blog{
+            width: 100%
         }
     </style>
 
     <script type="module">
-        import LoadBlog from "./src/components/blog.js";
+        import LoadStars from "./src/components/Stars.js";
+        import LoadBlog from "./src/components/Blog.js";
 
-        LoadBlog('./assets/json/blog-entries.json');
+        LoadStars(
+            document.querySelector('#introduction-section'),
+            [
+                7,
+                5
+            ],
+            [
+                'Home',
+                'Blog'
+            ],
+            [
+                '#',
+                './assets/pages/blog.html'
+            ]
+        );
+        LoadBlog(
+            document.querySelector('#sections'),
+            './assets/json/blog-entries.json'
+        );
     </script>
 </body>
 </html>

@@ -68,15 +68,26 @@ li{
 }
 
 a{
+    color: #229999;
+}
+a:hover{
     color: #12e2e2;
+    font-weight: 700;
 }
 
 .dram-bold{
     font-size: 22px;
 }
 .red-bold{
-    color: #8d0000;
+    color: #9d0000;
 }
 .fade-text{
     color: #444444;
+}
+.unselectable {
+    -moz-user-select: -moz-none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+    -o-user-select: none;
+    user-select: none;
 }
