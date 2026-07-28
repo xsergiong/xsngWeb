@@ -1,8 +1,8 @@
-const root = document.querySelector("#blog");
-
-function Load()
+function Load(path)
 {
-    fetch('./assets/json/blog-entries.json')
+    const root = document.querySelector("#blog");
+
+    fetch(path)
         .then(response => response.json())
         .then(data => 
         {
@@ -10,18 +10,36 @@ function Load()
             {
                 let entry = document.createElement('div');
                 let title = document.createElement('h3');
-                let content = document.createElement('p');
                 let time = document.createElement('p');
 
-                title.textContent = data[i].title;
-                content.textContent = data[i].content;
-                time.textContent = data[i].time + " " + data[i].date;
-                
                 entry.setAttribute('class', 'blog-entry');
                 time.setAttribute('class', 'fade-text');
 
-                entry.appendChild(title);  
-                entry.appendChild(content);
+                title.textContent = data[i].title;  
+                time.textContent = data[i].time + " " + data[i].date;
+
+                entry.appendChild(title);
+                if (!data[i].paragraphs)
+                {
+                    let content = document.createElement('p');
+
+                    content.textContent = data[i].content;
+
+                    entry.appendChild(content);
+                }
+                else
+                {
+                    for (let j = 0; j < data[i].content.length; j++)
+                    {
+                        let paragraph = document.createElement('p');
+                        paragraph.textContent = data[i].content[j];
+
+                        entry.appendChild(paragraph);
+
+                        if (j < data[i].content.length - 1)
+                            entry.appendChild(document.createElement('br'));
+                    }
+                }
                 entry.appendChild(time);
 
                 root.appendChild(entry);
@@ -30,4 +48,4 @@ function Load()
     );
 }
 
-Load();
+export default function LoadBlog(path) { Load(path) };

@@ -74,6 +74,10 @@
         }
     </style>
 
-    <script src="./src/components/blog.js"></script>
+    <script type="module">
+        import LoadBlog from "./src/components/blog.js";
+
+        LoadBlog('./assets/json/blog-entries.json');
+    </script>
 </body>
 </html>

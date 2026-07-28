@@ -1,8 +1,21 @@
 [
     {
+        "paragraphs":false,
         "title":"Opening",
         "content":"This is the first blog entry for the blog section of the xsng website blog as I need to make sure it functions just as intended and nothing else! So it really does though I wish I could inject paragraphs, which I actually could do if I structured this better! That's something I will need to work on and hopefully will figure out very easily but for now I am just glad this site is published and that you're reading it!",
         "time":"21:35",
         "date":"27/7/2026"
+    },
+    {
+        "paragraphs":true,
+        "title":"Blog.js",
+        "content":
+        [
+            "This entry is designed just to test a new formating that allows the addition of paragraphs.",
+            "It should work only by modifying the 'content' attribute in the JSON file from text to an array with text.",
+            "That way, I can append to the entry a <br> tag in between every item of the array."
+        ],
+        "time":"13:13",
+        "date":"28/7/2026"
     }
 ]
