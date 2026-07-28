@@ -2,7 +2,7 @@ const root = document.querySelector("#blog");
 
 function Load()
 {
-    fetch('../../assets/json/blog-entries.json')
+    fetch('./assets/json/blog-entries.json')
         .then(response => response.json())
         .then(data => 
         {
