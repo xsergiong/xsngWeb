@@ -6,7 +6,7 @@ function Load(path)
         .then(response => response.json())
         .then(data => 
         {
-            for (let i = 0; i < data.length; i++)
+            for (let i = data.length - 1; i > -1; i--)
             {
                 let entry = document.createElement('div');
                 let title = document.createElement('h3');
