@@ -73,26 +73,33 @@
     <script type="module">
         import LoadStars from "./src/components/Stars.js";
         import LoadBlog from "./src/components/Blog.js";
+        import BlockMobileAndTablet from "./src/components/Blocker.js";
 
-        LoadStars(
-            document.querySelector('#introduction-section'),
-            [
-                7,
-                5
-            ],
-            [
-                'Home',
-                'Blog'
-            ],
-            [
-                '#',
-                './assets/pages/blog.html'
-            ]
-        );
-        LoadBlog(
-            document.querySelector('#sections'),
-            './assets/json/blog-entries.json'
-        );
+        function Load(){
+            if (BlockMobileAndTablet())
+                return;
+            LoadStars(
+                document.querySelector('#introduction-section'),
+                [
+                    7,
+                    5
+                ],
+                [
+                    'Home',
+                    'Blog'
+                ],
+                [
+                    '#',
+                    './assets/pages/blog.html'
+                ]
+            );
+            LoadBlog(
+                document.querySelector('#sections'),
+                './assets/json/blog-entries.json'
+            );
+        }
+
+        Load();
     </script>
 </body>
 </html>
